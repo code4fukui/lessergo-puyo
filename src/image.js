@@ -1,4 +1,7 @@
-class GameImage {
+import { Config } from "./config.js";
+import { Stage } from "./stage.js";
+
+export class GameImage {
     static puyoImageList = null;
     static digitImageList = null;
     static batankyuImage = null;

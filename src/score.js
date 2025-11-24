@@ -1,4 +1,7 @@
-class Score {
+import { Config } from "./config.js";
+import { GameImage } from "./image.js";
+
+export class Score {
     static scoreElement;
     static digitCount = 0;
     static score = 0;

@@ -1,4 +1,9 @@
-class Player {
+import { Stage } from "./stage.js";
+import { GameImage } from "./image.js";
+import { Config } from "./config.js";
+import { Score } from "./score.js";
+
+export class Player {
     static centerPuyoColor = 0;
     static rotatingPuyoColor = 0;
     static playerPuyoStatus = null;

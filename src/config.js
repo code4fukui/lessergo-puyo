@@ -1,4 +1,4 @@
-class Config {
+export class Config {
     static puyoImageWidth = 40; // ぷよ画像の幅
     static puyoImageHeight = 40; // ぷよ画像の高さ
 

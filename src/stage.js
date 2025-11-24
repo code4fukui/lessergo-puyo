@@ -1,4 +1,7 @@
-class Stage {
+import { Config } from "./config.js";
+import { GameImage } from "./image.js";
+
+export class Stage {
     static stageElement = null;
     static puyoBoard = null;
     static puyoCount = 0;

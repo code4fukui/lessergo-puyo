@@ -1,3 +1,9 @@
+import { Config } from "./config.js";
+import { Score } from "./score.js";
+import { GameImage } from "./image.js";
+import { Stage } from "./stage.js";
+import { Player } from "./player.js";
+
 // 起動されたときに呼ばれる関数を登録する
 window.addEventListener("load", () => {
     // まずステージを整える
