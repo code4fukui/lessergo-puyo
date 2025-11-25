@@ -3,6 +3,7 @@ import { Score } from "./score.js";
 import { GameImage } from "./image.js";
 import { Stage } from "./stage.js";
 import { Player } from "./player.js";
+import { GameSound } from "./sound.js";
 
 // 起動されたときに呼ばれる関数を登録する
 window.addEventListener("load", () => {
@@ -20,8 +21,11 @@ window.addEventListener("load", () => {
 let gameState; // ゲームの現在の状況
 let frame; // ゲームの現在フレーム（1/60秒ごとに1追加される）
 let comboCount = 0; // 現在何連鎖しているか
+let sound;
 
 function initialize() {
+    sound = new GameSound();
+
     // 画像を準備する
     GameImage.initialize();
 
@@ -70,6 +74,8 @@ function gameLoop() {
                 // スコアを加算する
                 Score.addComboScore(comboCount, eraseInfo.piece, eraseInfo.color);
                 Stage.hideZenkeshi();
+                // 音を鳴らす
+                sound.playSound(comboCount);
             } else {
                 if (Stage.puyoCount === 0 && comboCount > 0) {
                     // 全部消えたので、全消しを表示する
